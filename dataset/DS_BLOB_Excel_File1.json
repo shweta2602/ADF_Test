@@ -8,10 +8,10 @@
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
-			"sheetName": "test",
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "blob-outputs"
+				"folderPath": "Test_Blob1",
+				"container": "adftest1"
 			},
 			"firstRowAsHeader": true
 		},
