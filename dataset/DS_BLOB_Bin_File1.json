@@ -1,0 +1,17 @@
+{
+	"name": "DS_BLOB_Bin_File1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_BIN_file1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "blob-outputs"
+			}
+		}
+	}
+}

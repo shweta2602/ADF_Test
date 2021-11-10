@@ -1,0 +1,19 @@
+{
+	"name": "DS_BLOB_Excel_File1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_Excel",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "blob-outputs"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
