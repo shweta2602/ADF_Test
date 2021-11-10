@@ -1,0 +1,9 @@
+{
+	"name": "SB-DataFactory1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6a62f35f-ed1f-42d7-93fc-ee89a42d79e6",
+		"tenantId": "e064a27b-2cee-4543-bbeb-392845d42896"
+	}
+}
