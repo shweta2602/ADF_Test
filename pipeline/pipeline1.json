@@ -25,17 +25,15 @@
 				],
 				"typeProperties": {
 					"source": {
-						"type": "ExcelSource",
-						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
-						}
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
 					},
 					"sink": {
 						"type": "BinarySink",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
+							"type": "AzureBlobStorageWriteSettings",
+							"copyBehavior": "PreserveHierarchy"
 						}
 					},
 					"enableStaging": false,
@@ -57,7 +55,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_BLOB_Excel_File1",
+						"referenceName": "DS_SQL_DB1",
 						"type": "DatasetReference"
 					}
 				],

@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "abc.txt.txt",
 				"container": "blob-outputs"
 			}
 		}
