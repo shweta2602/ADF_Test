@@ -1,0 +1,12 @@
+{
+	"name": "LS_SQL_DB1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=server-sql-1.database.windows.net;initial catalog=DB_SQL_1;user id=ADF",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDFEQjZEOERFLTQyMjUtNERERC1BNDAwLTQ0RTg1N0M2MzI5Q19hM2M0MWFiOC0xMTg3LTRmNDgtYWUwMy04YjNmYjM2MTI4MzciDQp9"
+		}
+	}
+}
