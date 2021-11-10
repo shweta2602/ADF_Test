@@ -25,9 +25,12 @@
 				],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"type": "ExcelSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						}
 					},
 					"sink": {
 						"type": "BinarySink",
@@ -36,11 +39,25 @@
 						}
 					},
 					"enableStaging": false,
-					"dataIntegrationUnits": 2
+					"parallelCopies": 1,
+					"enableSkipIncompatibleRow": true,
+					"logSettings": {
+						"enableCopyActivityLog": true,
+						"copyActivityLogSettings": {
+							"logLevel": "Info",
+							"enableReliableLogging": false
+						},
+						"logLocationSettings": {
+							"linkedServiceName": {
+								"referenceName": "LS_BLOB_Excel",
+								"type": "LinkedServiceReference"
+							}
+						}
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_SQL_DB1",
+						"referenceName": "DS_BLOB_Excel_File1",
 						"type": "DatasetReference"
 					}
 				],

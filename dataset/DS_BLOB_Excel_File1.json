@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "Test_Blob1",
-				"container": "adftest1"
+				"fileName": "Book1.xlsx",
+				"container": "blob-outputs"
 			},
 			"firstRowAsHeader": true
 		},
