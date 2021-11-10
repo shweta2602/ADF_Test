@@ -29,12 +29,24 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
+					"sink": {
+						"type": "BinarySink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						}
+					},
 					"enableStaging": false,
 					"dataIntegrationUnits": 2
 				},
 				"inputs": [
 					{
 						"referenceName": "DS_SQL_DB1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DS_BLOB_Bin_File1",
 						"type": "DatasetReference"
 					}
 				]
