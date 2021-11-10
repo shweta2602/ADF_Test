@@ -8,6 +8,7 @@
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
+			"sheetName": "test",
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"container": "blob-outputs"
