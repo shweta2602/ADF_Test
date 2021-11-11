@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "DS_BLOOB_CSV1",
+						"referenceName": "DS_BLOB_CSV1",
 						"type": "DatasetReference"
 					},
 					"name": "CSV"

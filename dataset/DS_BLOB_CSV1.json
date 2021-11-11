@@ -1,5 +1,5 @@
 {
-	"name": "DS_BLOOB_CSV1",
+	"name": "DS_BLOB_CSV1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_BLOB_CSV",
