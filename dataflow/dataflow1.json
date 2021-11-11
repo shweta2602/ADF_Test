@@ -1,0 +1,32 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DS_SQL_DB1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DS_BLOOB_CSV1",
+						"type": "DatasetReference"
+					},
+					"name": "CSV"
+				}
+			],
+			"transformations": [
+				{
+					"name": "addColNameAge"
+				}
+			],
+			"script": "source(output(\n\t\tName as string,\n\t\tNumber as string,\n\t\tSex as string,\n\t\tAge as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 derive(Name_Age = concatWS('-',Name,Number)) ~> addColNameAge\naddColNameAge sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionFileNames:['TEST1'],\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\tpartitionBy('hash', 1)) ~> CSV"
+		}
+	}
+}

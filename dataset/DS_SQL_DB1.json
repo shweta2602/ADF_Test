@@ -1,0 +1,34 @@
+{
+	"name": "DS_SQL_DB1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQL_DB1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Number",
+				"type": "varchar"
+			},
+			{
+				"name": "Sex",
+				"type": "char"
+			},
+			{
+				"name": "Age",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CopyTest"
+		}
+	}
+}
